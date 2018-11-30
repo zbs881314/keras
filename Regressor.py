@@ -25,7 +25,7 @@ model.compile(loss='mse', optimizer='sgd')
 
 # training
 print('Training ----------')
-for step in range(301)；
+for step in range(301):
     cost = model.train_on_batch(X_train, Y_train)
     if step % 100 == 0:
         print('train cost:', cost)
@@ -35,7 +35,7 @@ for step in range(301)；
 print('\nTesting --------')
 cost = model.evaluate(X_test, Y_test, batch_size = 40)
 print('test cost:', cost)
-W, b = model.layers[0],get_weights()
+W, b = model.layers[0].get_weights()
 print('Weights=', W, '\nbiases=', b)
 
 # plotting the prediction
