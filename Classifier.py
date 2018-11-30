@@ -3,7 +3,7 @@ np.random.seed(1337)
 from keras.datasets import mnist
 from keras.models import Sequential
 from keras.utils import np_utils
-from keras_layers import Dense, Activation
+from keras.layers import Dense, Activation
 from keras.optimizers import RMSprop
 
 # download the mnist to the path '~/.keras/datasets/' if it is the first time to be called
@@ -20,7 +20,7 @@ y_test = np_utils.to_categorical(y_test, num_classes=10)
 model = Sequential([Dense(32, input_dim=784), Activation('relu'), Dense(10), Activation('softmax'),])
 
 # another way to define your optimizer
-rmsprop = RMSprop(lr=0.001, rho=0.9, epsilon=1e-0.8, decay=0.0)
+rmsprop = RMSprop(lr=0.001, rho=0.9, epsilon=1e-08, decay=0.0)
 
 # we add metrics to get more results you want to see
 model.compile(optimizer=rmsprop, loss='categorical_crossentropy', metrics=['accuracy'])
