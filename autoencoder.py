@@ -3,7 +3,7 @@ np.random.seed(1337)
 from keras.datasets import mnist
 from keras.models import Model
 from keras.layers import Dense, Input
-from matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 (x_train, _), (x_test, y_test) = mnist.load_data()
 
@@ -24,7 +24,7 @@ input_img = Input(shape=(784,))
 #encoder layer
 encoded = Dense(128, activation='relu')(input_img)
 encoded = Dense(64, activation='relu')(encoded)
-encoded = Dense(10, activation=;relu')(encoded)
+encoded = Dense(10, activation='relu')(encoded)
 encoder_output = Dense(encoding_dim)(encoded)
 
 #decoder layer
