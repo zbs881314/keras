@@ -2,7 +2,7 @@ import numpy as np
 np.random.seed(1337)
 from keras.models import Sequential
 from keras.layers import Dense
-from keras.model import load_model
+from keras.models import load_model
 
 X = np.linspace(-1, 1, 200)
 np.random.shuffle(X)
