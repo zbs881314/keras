@@ -4,7 +4,7 @@ from keras.datasets import mnist
 from keras.utils import np_utils
 from keras.models import Sequential
 from keras.layers import Dense, Activation, Convolution2D, MaxPooling2D, Flatten
-rom keras.optimizers import Adam
+from keras.optimizers import Adam
 
 
 (X_train, y_train), (X_test, y_test) = mnist.load_data()
